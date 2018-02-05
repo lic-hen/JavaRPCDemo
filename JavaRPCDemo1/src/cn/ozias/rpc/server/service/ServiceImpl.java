@@ -3,9 +3,9 @@ package cn.ozias.rpc.server.service;
 public class ServiceImpl implements IService {
 
 	@Override
-	public void sayHello() {
+	public String sayHello() {
 
-		System.out.println("Hello World");
+		return "Hello World";
 	}
 
 }
