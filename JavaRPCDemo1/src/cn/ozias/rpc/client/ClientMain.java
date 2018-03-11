@@ -11,7 +11,7 @@ public class ClientMain {
 		
 		InetSocketAddress remoteAddress  = new InetSocketAddress(12345);
 		
-		IService proxy = Client.getProxy(IService.class, remoteAddress);
+		IService proxy = Client.<IService>getProxy(IService.class, remoteAddress);
 		
 		String sayHello = proxy.sayHello();
 		

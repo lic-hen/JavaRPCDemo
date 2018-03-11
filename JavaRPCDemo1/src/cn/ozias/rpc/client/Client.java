@@ -10,12 +10,12 @@ import java.lang.reflect.Proxy;
 import java.net.InetSocketAddress;
 import java.net.Socket;
 
-public class Client<T> {
+public class Client {
 
 	
 	
 	@SuppressWarnings("unchecked")
-	public static <T>T getProxy(Class<?> clazz, InetSocketAddress remoteAddress)
+	public static <T> T getProxy(Class<T> clazz, InetSocketAddress remoteAddress)
 	{
 		return (T) Proxy.newProxyInstance(clazz.getClassLoader(), new Class<?>[]{clazz}, new InvocationHandler() {
 			
